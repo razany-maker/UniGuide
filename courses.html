@@ -1,65 +1,439 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Course Map - UniGuide</title>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
 
-<body class="app-body">
-    <div class="bg-blob blob-1"></div>
-    <div class="bg-blob blob-2"></div>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar glass-card">
+            <a href="#" class="sidebar-brand">
+                <div class="sidebar-logo">UG</div>
+                <h2 style="font-size: 1.25rem; font-weight: 900;">UniGuide</h2>
+            </a>
 
-    <aside class="sidebar glass-panel">
-        <div class="sidebar-brand">
-            <div class="sidebar-icon">UG</div>
-            <h2>UniGuide</h2>
-        </div>
-        <nav class="sidebar-nav">
-            <a href="courses.html" class="nav-item active">Course Map</a>
-            <a href="profile.html" class="nav-item">Student Profile</a>
-            <a href="chatbot.html" class="nav-item">UniGuide Chat</a>
-        </nav>
-        <a href="login.html" class="logout-btn">Logout</a>
-    </aside>
+            <nav class="sidebar-nav">
+                <a href="courses.html" class="nav-link active">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+                        <polyline points="2 17 12 22 22 17"/>
+                        <polyline points="2 12 12 17 22 12"/>
+                    </svg>
+                    Course Map
+                </a>
+                <a href="profile.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
+                    Student Profile
+                </a>
+                <a href="chatbot.html" class="nav-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                    UniGuide Chat
+                </a>
+            </nav>
 
-    <main class="main-content">
-        <div class="content-header">
-            <h1>Interactive Course Map</h1>
-            <p>Click the checkbox to mark courses as completed.</p>
-        </div>
+            <a href="login.html" class="logout-btn">Log Out</a>
+        </aside>
 
-        <div class="course-map-container glass-panel">
-            <!-- Simulated nodes -->
-            <div class="course-node" style="top: 50px; left: 50%; transform: translateX(-50%); border-color: #263C74;">
-                <input type="checkbox" class="course-checkbox">
-                <h3>CS112</h3>
-                <p>Intro to Programming</p>
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="top-header glass-card">
+                <div class="header-title">
+                    <h1>Interactive Course Map</h1>
+                    <p>Computer Science Curriculum. Click a card to mark it as completed.</p>
+                </div>
+                <div style="background: white; padding: 0.5rem 1rem; border-radius: 1rem; font-weight: 800; font-size: 0.875rem; color: var(--blue-primary); box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                    B.Sc. Computer Science (132 Credits)
+                </div>
+            </header>
+
+            <!-- Scrollable Timeline Map -->
+            <div class="map-container glass-card">
+                <div class="curriculum-timeline">
+                    
+                    <!-- Year 1 - Semester 1 -->
+                    <div class="semester-col">
+                        <h2>Year 1 • First Semester</h2>
+                        
+                        <input type="checkbox" id="cs112" class="hidden-check">
+                        <label for="cs112" class="course-card">
+                            <div class="course-header">
+                                <span class="course-code">CS 112</span>
+                                <span class="course-credits">3 CR</span>
+                            </div>
+                            <h3 class="course-title">Introduction to Object-Oriented Programming</h3>
+                            <div class="course-prereq">None</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="math101" class="hidden-check">
+                        <label for="math101" class="course-card dept-math">
+                            <div class="course-header">
+                                <span class="course-code">MATH 101</span>
+                                <span class="course-credits">3 CR</span>
+                            </div>
+                            <h3 class="course-title">Calculus I</h3>
+                            <div class="course-prereq">None</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="phy101" class="hidden-check">
+                        <label for="phy101" class="course-card dept-phy">
+                            <div class="course-header">
+                                <span class="course-code">PHY 101</span>
+                                <span class="course-credits">3 CR</span>
+                            </div>
+                            <h3 class="course-title">General Physics I</h3>
+                            <div class="course-prereq">None</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="eng112" class="hidden-check">
+                        <label for="eng112" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">ENG 112</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">English Language II</h3>
+                            <div class="course-prereq">ENG 099</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="hss110" class="hidden-check">
+                        <label for="hss110" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">HSS 110</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Social Responsibility</h3>
+                            <div class="course-prereq">None</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+                    </div>
+
+                    <!-- Year 1 - Semester 2 -->
+                    <div class="semester-col">
+                        <h2>Year 1 • Second Semester</h2>
+                        
+                        <input type="checkbox" id="cs113" class="hidden-check">
+                        <label for="cs113" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 113</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Object-Oriented Programming (C++)</h3>
+                            <div class="course-prereq">Pre: CS 112</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="math102" class="hidden-check">
+                        <label for="math102" class="course-card dept-math">
+                            <div class="course-header"><span class="course-code">MATH 102</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Calculus II</h3>
+                            <div class="course-prereq">Pre: MATH 101</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="phy102" class="hidden-check">
+                        <label for="phy102" class="course-card dept-phy">
+                            <div class="course-header"><span class="course-code">PHY 102</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">General Physics II</h3>
+                            <div class="course-prereq">Pre: PHY 101</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="math233" class="hidden-check">
+                        <label for="math233" class="course-card dept-math">
+                            <div class="course-header"><span class="course-code">MATH 233</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Discrete Mathematics</h3>
+                            <div class="course-prereq">None</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="arab101" class="hidden-check">
+                        <label for="arab101" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">ARAB 101</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Arabic Language</h3>
+                            <div class="course-prereq">ARAB 099</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+                    </div>
+
+                    <!-- Year 2 - Semester 1 -->
+                    <div class="semester-col">
+                        <h2>Year 2 • First Semester</h2>
+                        
+                        <input type="checkbox" id="cs211" class="hidden-check">
+                        <label for="cs211" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 211</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Data Structures and Algorithms</h3>
+                            <div class="course-prereq">Pre: CS 113 & MATH 233</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs284" class="hidden-check">
+                        <label for="cs284" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 284</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Algorithm Design & Analysis</h3>
+                            <div class="course-prereq">Pre: CS 211</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cpe252" class="hidden-check">
+                        <label for="cpe252" class="course-card">
+                            <div class="course-header"><span class="course-code">CPE 252</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Computer Logic Design</h3>
+                            <div class="course-prereq">None</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cis200" class="hidden-check">
+                        <label for="cis200" class="course-card">
+                            <div class="course-header"><span class="course-code">CIS 200</span><span class="course-credits">1 CR</span></div>
+                            <h3 class="course-title">Professional & Ethical Issues</h3>
+                            <div class="course-prereq">Pre: 30 Credits</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="math241" class="hidden-check">
+                        <label for="math241" class="course-card dept-math">
+                            <div class="course-header"><span class="course-code">MATH 241</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Linear Algebra I</h3>
+                            <div class="course-prereq">Pre: MATH 101</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+                    </div>
+
+                    <!-- Year 2 - Semester 2 -->
+                    <div class="semester-col">
+                        <h2>Year 2 • Second Semester</h2>
+                        
+                        <input type="checkbox" id="cs281" class="hidden-check">
+                        <label for="cs281" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 281</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Introduction to Web Programming</h3>
+                            <div class="course-prereq">Pre: CS 113</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs255" class="hidden-check">
+                        <label for="cs255" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 255</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Assembly Language</h3>
+                            <div class="course-prereq">Pre: CPE 252 & CS 113</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cis221" class="hidden-check">
+                        <label for="cis221" class="course-card">
+                            <div class="course-header"><span class="course-code">CIS 221</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Fundamentals of Database Systems</h3>
+                            <div class="course-prereq">Pre: CS 211</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="se230" class="hidden-check">
+                        <label for="se230" class="course-card">
+                            <div class="course-header"><span class="course-code">SE 230</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Fundamentals of Software Engineering</h3>
+                            <div class="course-prereq">Pre: CS 211</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="stat201" class="hidden-check">
+                        <label for="stat201" class="course-card dept-math">
+                            <div class="course-header"><span class="course-code">STAT 201</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Intro to Probability & Statistics</h3>
+                            <div class="course-prereq">Pre: MATH 102</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+                    </div>
+
+                    <!-- Year 3 - Semester 1 -->
+                    <div class="semester-col">
+                        <h2>Year 3 • First Semester</h2>
+                        
+                        <input type="checkbox" id="cs311" class="hidden-check">
+                        <label for="cs311" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 311</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Advanced Data Structures</h3>
+                            <div class="course-prereq">Pre: CS 284</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs318" class="hidden-check">
+                        <label for="cs318" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 318</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Human-Computer Interaction</h3>
+                            <div class="course-prereq">Pre: CS 281</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs351" class="hidden-check">
+                        <label for="cs351" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 351</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Computer Architecture</h3>
+                            <div class="course-prereq">Pre: CS 255</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs365" class="hidden-check">
+                        <label for="cs365" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 365</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Artificial Intelligence</h3>
+                            <div class="course-prereq">Pre: CS 211</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="elec1" class="hidden-check">
+                        <label for="elec1" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">ELEC I</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Department Elective I</h3>
+                            <div class="course-prereq">Varies</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+                    </div>
+
+                    <!-- Year 3 - Semester 2 -->
+                    <div class="semester-col">
+                        <h2>Year 3 • Second Semester</h2>
+                        
+                        <input type="checkbox" id="cs352" class="hidden-check">
+                        <label for="cs352" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 352</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Operating Systems</h3>
+                            <div class="course-prereq">Pre: CS 351</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs342" class="hidden-check">
+                        <label for="cs342" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 342</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Computer Networks</h3>
+                            <div class="course-prereq">Pre: CS 351</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs376" class="hidden-check">
+                        <label for="cs376" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 376</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Software Construction</h3>
+                            <div class="course-prereq">Pre: SE 230</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="eng212" class="hidden-check">
+                        <label for="eng212" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">ENG 212</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Communication Skills</h3>
+                            <div class="course-prereq">Pre: ENG 112</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="elec2" class="hidden-check">
+                        <label for="elec2" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">ELEC II</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Department Elective II</h3>
+                            <div class="course-prereq">Varies</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+                    </div>
+
+                    <!-- Year 4 - Semester 1 -->
+                    <div class="semester-col">
+                        <h2>Year 4 • First Semester</h2>
+                        
+                        <input type="checkbox" id="cs491" class="hidden-check">
+                        <label for="cs491" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 491</span><span class="course-credits">1 CR</span></div>
+                            <h3 class="course-title">Graduation Project I</h3>
+                            <div class="course-prereq">Pre: 90 Credits</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs420" class="hidden-check">
+                        <label for="cs420" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 420</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Compiler Design</h3>
+                            <div class="course-prereq">Pre: CS 351</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs450" class="hidden-check">
+                        <label for="cs450" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 450</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Distributed Systems</h3>
+                            <div class="course-prereq">Pre: CS 342 & CS 352</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs490" class="hidden-check">
+                        <label for="cs490" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 490</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Practical Training</h3>
+                            <div class="course-prereq">Pre: 90 Credits</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="elec3" class="hidden-check">
+                        <label for="elec3" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">ELEC III</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Department Elective III</h3>
+                            <div class="course-prereq">Varies</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+                    </div>
+
+                    <!-- Year 4 - Semester 2 -->
+                    <div class="semester-col">
+                        <h2>Year 4 • Second Semester</h2>
+                        
+                        <input type="checkbox" id="cs492" class="hidden-check">
+                        <label for="cs492" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 492</span><span class="course-credits">2 CR</span></div>
+                            <h3 class="course-title">Graduation Project II</h3>
+                            <div class="course-prereq">Pre: CS 491</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="cs475" class="hidden-check">
+                        <label for="cs475" class="course-card">
+                            <div class="course-header"><span class="course-code">CS 475</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Computer Security</h3>
+                            <div class="course-prereq">Pre: CS 342</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="elec4" class="hidden-check">
+                        <label for="elec4" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">ELEC IV</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Department Elective IV</h3>
+                            <div class="course-prereq">Varies</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="free1" class="hidden-check">
+                        <label for="free1" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">FREE I</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Free University Elective I</h3>
+                            <div class="course-prereq">None</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+
+                        <input type="checkbox" id="free2" class="hidden-check">
+                        <label for="free2" class="course-card dept-uni">
+                            <div class="course-header"><span class="course-code">FREE II</span><span class="course-credits">3 CR</span></div>
+                            <h3 class="course-title">Free University Elective II</h3>
+                            <div class="course-prereq">None</div>
+                            <div class="check-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+                        </label>
+                    </div>
+
+                </div>
             </div>
-
-            <!-- Connectors (Simulated with absolute lines) -->
-            <div class="connector" style="top: 130px; left: 50%; width: 2px; height: 40px;"></div>
-            <div class="connector" style="top: 170px; left: 30%; width: 40%; height: 2px;"></div>
-            <div class="connector" style="top: 170px; left: 30%; width: 2px; height: 30px;"></div>
-            <div class="connector" style="top: 170px; left: 70%; width: 2px; height: 30px;"></div>
-
-            <div class="course-node" style="top: 200px; left: 30%; transform: translateX(-50%); border-color: #D03028;">
-                <input type="checkbox" class="course-checkbox">
-                <h3>CS113</h3>
-                <p>Object Oriented Prog</p>
-            </div>
-
-            <div class="course-node" style="top: 200px; left: 70%; transform: translateX(-50%); border-color: #8B5CF6;">
-                <input type="checkbox" class="course-checkbox">
-                <h3>CS211</h3>
-                <p>Data Structures</p>
-            </div>
-        </div>
-    </main>
-
-    <script src="script.js"></script>
+        </main>
+    </div>
 </body>
-
 </html>

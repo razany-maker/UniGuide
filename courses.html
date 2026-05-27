@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Map - UniGuide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+
+    <aside class="sidebar glass-panel">
+        <div class="sidebar-brand">
+            <div class="sidebar-icon">UG</div>
+            <h2>UniGuide</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="courses.html" class="nav-item active">Course Map</a>
+            <a href="profile.html" class="nav-item">Student Profile</a>
+            <a href="chatbot.html" class="nav-item">UniGuide Chat</a>
+        </nav>
+        <a href="login.html" class="logout-btn">Logout</a>
+    </aside>
+
+    <main class="main-content">
+        <div class="content-header">
+            <h1>Interactive Course Map</h1>
+            <p>Click the checkbox to mark courses as completed.</p>
+        </div>
+
+        <div class="course-map-container glass-panel">
+            <!-- Simulated nodes -->
+            <div class="course-node" style="top: 50px; left: 50%; transform: translateX(-50%); border-color: #263C74;">
+                <input type="checkbox" class="course-checkbox">
+                <h3>CS112</h3>
+                <p>Intro to Programming</p>
+            </div>
+
+            <!-- Connectors (Simulated with absolute lines) -->
+            <div class="connector" style="top: 130px; left: 50%; width: 2px; height: 40px;"></div>
+            <div class="connector" style="top: 170px; left: 30%; width: 40%; height: 2px;"></div>
+            <div class="connector" style="top: 170px; left: 30%; width: 2px; height: 30px;"></div>
+            <div class="connector" style="top: 170px; left: 70%; width: 2px; height: 30px;"></div>
+
+            <div class="course-node" style="top: 200px; left: 30%; transform: translateX(-50%); border-color: #D03028;">
+                <input type="checkbox" class="course-checkbox">
+                <h3>CS113</h3>
+                <p>Object Oriented Prog</p>
+            </div>
+
+            <div class="course-node" style="top: 200px; left: 70%; transform: translateX(-50%); border-color: #8B5CF6;">
+                <input type="checkbox" class="course-checkbox">
+                <h3>CS211</h3>
+                <p>Data Structures</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

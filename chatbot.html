@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - UniGuide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="app-body">
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+
+    <aside class="sidebar glass-panel">
+        <div class="sidebar-brand">
+            <div class="sidebar-icon">UG</div>
+            <h2>UniGuide</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="courses.html" class="nav-item">Course Map</a>
+            <a href="profile.html" class="nav-item">Student Profile</a>
+            <a href="chatbot.html" class="nav-item active">UniGuide Chat</a>
+        </nav>
+        <a href="login.html" class="logout-btn">Logout</a>
+    </aside>
+
+    <main class="main-content" style="display: flex; flex-direction: column;">
+        <div class="chat-container glass-panel">
+            <div class="chat-header">
+                <h2>UniGuide Assistant</h2>
+                <p>Always online • Ready to help</p>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    <div class="bubble">Hello Bushra! I'm UniGuide. How can I help you with your computer science degree
+                        plan today?</div>
+                </div>
+            </div>
+
+            <form class="chat-input-area" id="chatForm">
+                <input type="text" id="chatInput" placeholder="Ask about courses, prerequisites..." required>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

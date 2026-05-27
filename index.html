@@ -1,73 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - UniGuide</title>
-    <link rel="stylesheet" href="style.css">
+    <title>UniGuide - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body class="min-h-screen bg-[#141C30] relative overflow-hidden flex flex-col justify-center items-center p-4">
+    <!-- Playful Background Shapes -->
+    <div class="absolute top-[-10%] left-[-10%] w-96 h-96 bg-[#263C74] rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
+    <div class="absolute top-[-10%] right-[-10%] w-96 h-96 bg-[#D03028] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+    <div class="absolute bottom-[-10%] left-[20%] w-96 h-96 bg-[#1F2D4D] rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
 
-<body>
-    <!-- Decorative Backgrounds -->
-    <div class="bg-blob blob-1"></div>
-    <div class="bg-blob blob-2"></div>
-
-    <div class="auth-container">
-        <div class="glass-panel auth-card">
-            <div class="auth-card-accent-line"></div>
-
-            <div class="auth-header">
-                <div class="auth-icon">
-                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
-                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
-                    </svg>
-                </div>
-                <h1>UniGuide</h1>
-                <p>Welcome back to JUST Academic Advising</p>
+    <div class="relative w-full max-w-md bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-2xl overflow-hidden border border-white/50 z-10 transform transition-all hover:scale-[1.01]">
+        <div class="bg-gradient-to-br from-[#263C74] to-[#1F2D4D] p-10 text-center relative overflow-hidden">
+            <div class="w-28 h-28 bg-[#FFFFFF] rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl transform transition-transform hover:rotate-[360deg] duration-1000 ease-in-out border-4 border-white/20 overflow-hidden">
+                <img src="WhatsApp_Image_2026-05-25_at_10.09.31_PM.jpeg" alt="Logo" class="w-full h-full object-cover" />
             </div>
-
-            <form id="loginForm">
-                <div class="form-group">
-                    <label for="email">University Email</label>
-                    <div class="input-wrapper">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="#263C74" stroke-width="2">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                            <polyline points="22,6 12,13 2,6" />
-                        </svg>
-                        <input type="email" id="email" placeholder="student@just.edu.jo" required>
+            <h1 class="text-3xl font-extrabold text-[#FFFFFF] tracking-tight">UniGuide</h1>
+            <p class="text-[#E7ECF0] text-sm mt-2 opacity-90 font-medium bg-white/10 inline-block px-4 py-1 rounded-full backdrop-blur-sm">Computer Science Students Advisor</p>
+        </div>
+        
+        <div class="p-8">
+            <form action="chatbot.html" class="space-y-6">
+                <div class="group">
+                    <label class="block text-sm font-bold text-[#1F2D4D] mb-2 ml-1">Student ID</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <i data-feather="user" class="h-5 w-5 text-[#263C74]"></i>
+                        </div>
+                        <input type="text" required class="block w-full pl-12 pr-4 py-4 border-2 border-[#E7ECF0] rounded-2xl focus:ring-4 focus:ring-[#263C74]/20 focus:border-[#263C74] outline-none transition-all text-[#1F2D4D] bg-white font-medium shadow-sm hover:border-[#263C74]/50" placeholder="e.g. 112233">
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <div style="display: flex; justify-content: space-between; align-items: center;">
-                        <label for="password" style="margin-bottom: 0;">Password</label>
-                        <a href="forgot-password.html" class="forgot-link">Forgot Password?</a>
+                <div class="group">
+                    <div class="flex items-center justify-between mb-2 ml-1">
+                        <label class="block text-sm font-bold text-[#1F2D4D]">Password</label>
+                        <a href="forgot-password.html" class="text-sm font-bold text-[#D03028] hover:text-[#263C74] transition-colors">Forgot?</a>
                     </div>
-                    <div class="input-wrapper" style="margin-top: 8px;">
-                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="#263C74" stroke-width="2">
-                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                            <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                        </svg>
-                        <input type="password" id="password" placeholder="••••••••" required>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <i data-feather="lock" class="h-5 w-5 text-[#263C74]"></i>
+                        </div>
+                        <input type="password" required class="block w-full pl-12 pr-4 py-4 border-2 border-[#E7ECF0] rounded-2xl focus:ring-4 focus:ring-[#263C74]/20 focus:border-[#263C74] outline-none transition-all text-[#1F2D4D] bg-white font-medium shadow-sm hover:border-[#263C74]/50" placeholder="••••••••">
                     </div>
                 </div>
 
-                <button type="submit" class="btn-primary">
-                    Sign In
-                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12 5 19 12 12 19"></polyline>
-                    </svg>
+                <button type="submit" class="w-full flex justify-center items-center py-4 px-4 border border-transparent rounded-2xl shadow-lg shadow-[#263C74]/30 text-lg font-bold text-[#FFFFFF] bg-[#263C74] hover:bg-[#D03028] hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[#D03028]/50 transition-all duration-300">
+                    <i data-feather="log-in" class="w-6 h-6 mr-2"></i>
+                    Let's Go!
                 </button>
             </form>
         </div>
     </div>
+    
+    <p class="mt-8 text-sm font-semibold text-[#1F2D4D] opacity-60 z-10 bg-white/40 px-4 py-2 rounded-full backdrop-blur-md">
+        © 2026 Jordan University of Science and Technology
+    </p>
 
-    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
 </body>
-
 </html>

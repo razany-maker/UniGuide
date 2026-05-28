@@ -1,151 +1,124 @@
-<main class="main-content profile-page">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile - UniGuide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-brand">
+        <div class="logo-box">
+          <img src="logo.jpeg" alt="JUST CS Logo">
+        </div>
+        <div>
+          <h2>JUST CS</h2>
+          <p>Advisor Portal</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="chatbot.html" class="nav-item">▱ Advising Chat</a>
+        <a href="courses.html" class="nav-item">⌘ Courses Tree</a>
+        <a href="profile.html" class="nav-item active">♙ Profile Dashboard</a>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="mini-profile">
+        <div class="mini-avatar">BA</div>
+        <div>
+          <h4>Bushra Al momani</h4>
+          <p>ID: 112233</p>
+        </div>
+      </div>
+
+      <a href="index.html" class="logout-btn">↪ Logout</a>
+    </div>
+  </aside>
+
+  <main class="main-content profile-page">
     <div class="profile-title">
-        <h1>Student Profile ✨</h1>
-        <p>Track your progress and celebrate your wins!</p>
+      <h1>Student Profile ✨</h1>
+      <p>Track your progress and celebrate your wins!</p>
     </div>
 
     <section class="profile-dashboard">
-        <div class="student-card">
-            <div class="student-cover">
-                <div class="student-avatar">BA</div>
-            </div>
 
-            <div class="student-info">
-                <h2>Bushra Al momani</h2>
-                <span class="student-year">3rd Year</span>
-
-                <p>🎓 11223344</p>
-                <p>✉️ bm1122@cit.just.edu.jo</p>
-                <p>📅 Enrolled: Fall 2021</p>
-            </div>
+      <div class="student-card">
+        <div class="student-cover">
+          <div class="student-avatar">BA</div>
         </div>
 
-        <div class="profile-right">
-            <div class="profile-stats">
-                <div class="profile-stat-card">
-                    <div class="stat-icon blue">◎</div>
-                    <p>CUMULATIVE GPA</p>
-                    <h3>3.42</h3>
-                </div>
+        <div class="student-info">
+          <h2>Bushra Al momani</h2>
+          <span class="student-year">3rd Year</span>
 
-                <div class="profile-stat-card">
-                    <div class="stat-icon green">▣</div>
-                    <p>CREDITS PASSED</p>
-                    <h3>84 / 132</h3>
-                </div>
-
-                <div class="profile-stat-card">
-                    <div class="stat-icon red">⚑</div>
-                    <p>ACADEMIC STATUS</p>
-                    <h3 class="excellent">Excellent</h3>
-                </div>
-            </div>
-
-            <div class="deadlines-card">
-                <h2>Upcoming Deadlines & Exams ⏰</h2>
-
-                <div class="deadline-item">
-                    <div class="deadline-date red-date">12</div>
-                    <div>
-                        <h4>CS311 Midterm Exam</h4>
-                        <p>Database Systems • Hall A</p>
-                    </div>
-                    <span>In 2 Days</span>
-                </div>
-
-                <div class="deadline-item">
-                    <div class="deadline-date orange-date">15</div>
-                    <div>
-                        <h4>CS284 Assignment 3</h4>
-                        <p>Analysis of Algorithms • e-Learning</p>
-                    </div>
-                    <span>In 5 Days</span>
-                </div>
-
-                <div class="deadline-item">
-                    <div class="deadline-date blue-date">22</div>
-                    <div>
-                        <h4>SE320 Project Proposal</h4>
-                        <p>System Analysis • Group Submission</p>
-                    </div>
-                    <span>Next Week</span>
-                </div>
-            </div>
+          <p>♙ 11223344</p>
+          <p>✉ bm1122@cit.just.edu.jo</p>
+          <p>▣ Enrolled: Fall 2021</p>
         </div>
+      </div>
+
+      <div class="profile-right">
+        <div class="profile-stats">
+          <div class="profile-stat-card">
+            <div class="stat-icon blue">◎</div>
+            <p>CUMULATIVE GPA</p>
+            <h3>3.42</h3>
+          </div>
+
+          <div class="profile-stat-card">
+            <div class="stat-icon green">▭</div>
+            <p>CREDITS PASSED</p>
+            <h3>84 <span>/ 132</span></h3>
+          </div>
+
+          <div class="profile-stat-card ribbon-card">
+            <div class="stat-icon red">♙</div>
+            <p>ACADEMIC STATUS</p>
+            <h3 class="excellent">Excellent</h3>
+          </div>
+        </div>
+
+        <div class="deadlines-card">
+          <h2>Upcoming Deadlines & Exams ⏰</h2>
+
+          <div class="deadline-item">
+            <div class="deadline-date red-date">12</div>
+            <div>
+              <h4>CS311 Midterm Exam</h4>
+              <p>Database Systems • Hall A</p>
+            </div>
+            <span class="red-tag">In 2 Days</span>
+          </div>
+
+          <div class="deadline-item">
+            <div class="deadline-date orange-date">15</div>
+            <div>
+              <h4>CS284 Assignment 3</h4>
+              <p>Analysis of Algorithms • e-Learning</p>
+            </div>
+            <span class="orange-tag">In 5 Days</span>
+          </div>
+
+          <div class="deadline-item">
+            <div class="deadline-date blue-date">22</div>
+            <div>
+              <h4>SE320 Project Proposal</h4>
+              <p>System Analysis • Group Submission</p>
+            </div>
+            <span class="blue-tag">Next Week</span>
+          </div>
+        </div>
+      </div>
+
     </section>
-</main><main class="main-content profile-page">
-    <div class="profile-title">
-        <h1>Student Profile ✨</h1>
-        <p>Track your progress and celebrate your wins!</p>
-    </div>
+  </main>
 
-    <section class="profile-dashboard">
-        <div class="student-card">
-            <div class="student-cover">
-                <div class="student-avatar">BA</div>
-            </div>
-
-            <div class="student-info">
-                <h2>Bushra Al momani</h2>
-                <span class="student-year">3rd Year</span>
-
-                <p>🎓 11223344</p>
-                <p>✉️ bm1122@cit.just.edu.jo</p>
-                <p>📅 Enrolled: Fall 2021</p>
-            </div>
-        </div>
-
-        <div class="profile-right">
-            <div class="profile-stats">
-                <div class="profile-stat-card">
-                    <div class="stat-icon blue">◎</div>
-                    <p>CUMULATIVE GPA</p>
-                    <h3>3.42</h3>
-                </div>
-
-                <div class="profile-stat-card">
-                    <div class="stat-icon green">▣</div>
-                    <p>CREDITS PASSED</p>
-                    <h3>84 / 132</h3>
-                </div>
-
-                <div class="profile-stat-card">
-                    <div class="stat-icon red">⚑</div>
-                    <p>ACADEMIC STATUS</p>
-                    <h3 class="excellent">Excellent</h3>
-                </div>
-            </div>
-
-            <div class="deadlines-card">
-                <h2>Upcoming Deadlines & Exams ⏰</h2>
-
-                <div class="deadline-item">
-                    <div class="deadline-date red-date">12</div>
-                    <div>
-                        <h4>CS311 Midterm Exam</h4>
-                        <p>Database Systems • Hall A</p>
-                    </div>
-                    <span>In 2 Days</span>
-                </div>
-
-                <div class="deadline-item">
-                    <div class="deadline-date orange-date">15</div>
-                    <div>
-                        <h4>CS284 Assignment 3</h4>
-                        <p>Analysis of Algorithms • e-Learning</p>
-                    </div>
-                    <span>In 5 Days</span>
-                </div>
-
-                <div class="deadline-item">
-                    <div class="deadline-date blue-date">22</div>
-                    <div>
-                        <h4>SE320 Project Proposal</h4>
-                        <p>System Analysis • Group Submission</p>
-                    </div>
-                    <span>Next Week</span>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+</body>
+</html>

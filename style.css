@@ -954,3 +954,21 @@ body:has(.app-layout) .dept-uni .course-code {
 .input-box:focus-within .login-icon {
   color: #D73A33;
 }
+/* RED ICON ON HOVER */
+
+.input-box:hover svg,
+.input-box:focus-within svg {
+  stroke: #D73A33 !important;
+  color: #D73A33 !important;
+}
+
+/* BORDER + SHADOW */
+
+.input-box:hover .login-input,
+.input-box:focus-within .login-input {
+  border: 2px solid #253155 !important;
+
+  box-shadow:
+    0 0 0 4px rgba(37, 49, 85, 0.15),
+    0 8px 18px rgba(37, 49, 85, 0.18) !important;
+}

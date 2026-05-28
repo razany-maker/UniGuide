@@ -59,35 +59,7 @@ body {
 }
 
 /* Login Page Specifics */
-.auth-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  padding: 20px;
-}
 
-.auth-card {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 2.5rem;
-  padding: 40px;
-  overflow: hidden;
-}
-
-.auth-card-accent-line {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 8px;
-  background: linear-gradient(90deg, var(--primary), var(--accent), var(--primary));
-}
-
-.auth-header {
-  text-align: center;
-  margin-bottom: 40px;
-}
 
 .auth-icon {
   width: 60px;
@@ -136,9 +108,6 @@ body {
   margin-left: 4px;
 }
 
-.input-wrapper {
-  position: relative;
-}
 
 .input-icon {
   position: absolute;
@@ -798,4 +767,135 @@ body:has(.app-layout) .dept-phy .course-code {
 
 body:has(.app-layout) .dept-uni .course-code {
   color: #64748B;
+}
+.forgot-page {
+  min-height: 100vh;
+  background: #E7ECF0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.forgot-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.forgot-card {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 42px;
+  text-align: center;
+  box-shadow: 0 22px 40px rgba(0, 0, 0, 0.14);
+}
+
+.auth-icon {
+  width: 78px;
+  height: 78px;
+  background: #E8EDF2;
+  border-radius: 50%;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.forgot-card:hover .auth-icon {
+  transform: rotate(10deg);
+}
+
+.forgot-card h1 {
+  color: #0F2348;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.forgot-card p {
+  color: #6B7890;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 430px;
+  margin: 0 auto 38px;
+}
+
+.form-group {
+  text-align: left;
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  display: block;
+  color: #0F2348;
+  font-weight: 800;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 62px;
+  padding: 0 18px 0 54px;
+  border: 1px solid #D9DEE7;
+  border-radius: 16px;
+  outline: none;
+  font-size: 18px;
+  color: #0F2348;
+  background: #FAFBFD;
+}
+
+.input-wrapper input::placeholder {
+  color: #9AA4B5;
+}
+
+.input-wrapper input:focus {
+  border-color: #263C74;
+  background: white;
+}
+
+.reset-btn {
+  width: 100%;
+  height: 58px;
+  border: none;
+  border-radius: 16px;
+  background: #263C74;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.reset-btn:hover {
+  background: #222D4B;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 40px;
+  color: #0F2348;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  text-decoration: underline;
 }

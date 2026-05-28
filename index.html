@@ -26,27 +26,49 @@
         <div class="p-8">
             <form action="chatbot.html" class="space-y-6">
                 <div class="group">
-                    <label class="block text-sm font-bold text-[#1F2D4D] mb-2 ml-1">Student ID</label>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <i data-feather="user" class="h-5 w-5 text-[#263C74]"></i>
-                        </div>
-                        <input type="text" required class="block w-full pl-12 pr-4 py-4 border-2 border-[#E7ECF0] rounded-2xl focus:ring-4 focus:ring-[#263C74]/20 focus:border-[#263C74] outline-none transition-all text-[#1F2D4D] bg-white font-medium shadow-sm hover:border-[#263C74]/50" placeholder="e.g. 112233">
-                    </div>
-                </div>
+    <label class="block text-sm font-bold text-[#1F2D4D] mb-2 ml-1">
+        Student ID
+    </label>
 
-                <div class="group">
-                    <div class="flex items-center justify-between mb-2 ml-1">
-                        <label class="block text-sm font-bold text-[#1F2D4D]">Password</label>
-                        <a href="forgot-password.html" class="text-sm font-bold text-[#D03028] hover:text-[#263C74] transition-colors">Forgot?</a>
-                    </div>
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
-                            <i data-feather="lock" class="h-5 w-5 text-[#263C74]"></i>
-                        </div>
-                        <input type="password" required class="block w-full pl-12 pr-4 py-4 border-2 border-[#E7ECF0] rounded-2xl focus:ring-4 focus:ring-[#263C74]/20 focus:border-[#263C74] outline-none transition-all text-[#1F2D4D] bg-white font-medium shadow-sm hover:border-[#263C74]/50" placeholder="••••••••">
-                    </div>
-                </div>
+    <div class="input-box relative">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <i data-feather="user" class="login-icon h-5 w-5"></i>
+        </div>
+
+        <input
+            type="text"
+            required
+            class="login-input block w-full pl-12 pr-4 py-4 rounded-2xl"
+            placeholder="e.g. 112233"
+        >
+    </div>
+</div>
+
+               <div class="group">
+    <div class="flex items-center justify-between mb-2 ml-1">
+        <label class="block text-sm font-bold text-[#1F2D4D]">
+            Password
+        </label>
+
+        <a href="forgot-password.html"
+           class="text-sm font-bold text-[#D03028] hover:text-[#263C74] transition-colors">
+            Forgot?
+        </a>
+    </div>
+
+    <div class="input-box relative">
+        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+            <i data-feather="lock" class="login-icon h-5 w-5"></i>
+        </div>
+
+        <input
+            type="password"
+            required
+            class="login-input block w-full pl-12 pr-4 py-4 rounded-2xl"
+            placeholder="••••••••"
+        >
+    </div>
+</div>
 
                 <button type="submit" class="w-full flex justify-center items-center py-4 px-4 border border-transparent rounded-2xl shadow-lg shadow-[#263C74]/30 text-lg font-bold text-[#FFFFFF] bg-[#263C74] hover:bg-[#D03028] hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-[#D03028]/50 transition-all duration-300">
                     <i data-feather="log-in" class="w-6 h-6 mr-2"></i>

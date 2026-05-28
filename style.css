@@ -920,3 +920,37 @@ body:has(.app-layout) .dept-uni .course-code {
 .back-link:hover {
   text-decoration: underline;
 }
+/* ===== LOGIN INPUT EFFECT ===== */
+
+.input-box {
+  transition: all 0.3s ease;
+}
+
+.login-input {
+  width: 100%;
+  border: 2px solid #E7ECF0;
+  outline: none;
+  background: white;
+  color: #1F2D4D;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.login-icon {
+  color: #263C74;
+  transition: color 0.3s ease;
+}
+
+/* when input is focused */
+
+.input-box:focus-within .login-input {
+  border-color: #253155;
+  box-shadow:
+    0 0 0 4px rgba(37, 49, 85, 0.15),
+    0 8px 18px rgba(37, 49, 85, 0.18);
+}
+
+.input-box:focus-within .login-icon {
+  color: #D73A33;
+}
